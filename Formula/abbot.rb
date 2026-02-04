@@ -1,8 +1,8 @@
 class Abbot < Formula
   desc "Persistent AI background daemon"
-  homepage "https://github.com/ianzepp/abbot"
+  homepage "https://github.com/ianzepp/abbot-releases"
   version "0.1.0"
-  license "MIT"
+  license :cannot_represent  # Non-commercial use only
 
   on_macos do
     if Hardware::CPU.arm?
