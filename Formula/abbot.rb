@@ -15,13 +15,11 @@ class Abbot < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm?
-      url "https://github.com/ianzepp/abbot-releases/releases/download/v0.1.0/abbot-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_ARM64_SHA256"
-    else
+    if Hardware::CPU.intel?
       url "https://github.com/ianzepp/abbot-releases/releases/download/v0.1.0/abbot-x86_64-unknown-linux-gnu.tar.gz"
       sha256 "PLACEHOLDER_LINUX_X86_64_SHA256"
     end
+    # Linux ARM64 not yet supported
   end
 
   def install
