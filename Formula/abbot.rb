@@ -23,10 +23,13 @@ class Abbot < Formula
   end
 
   def install
+    bin.install "abbotd"
     bin.install "abbot"
+    bin.install "abbot-monitor"
+    bin.install "abbot-tui"
   end
 
   test do
-    assert_match "abbot", shell_output("#{bin}/abbot --version")
+    assert_match "abbotd", shell_output("#{bin}/abbotd --version")
   end
 end
