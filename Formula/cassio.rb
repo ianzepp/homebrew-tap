@@ -1,25 +1,25 @@
 class Cassio < Formula
   desc "Turn AI coding session logs into searchable transcripts"
   homepage "https://github.com/ianzepp/cassio"
-  version "0.8.1"
+  version "0.8.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ianzepp/cassio/releases/download/v0.8.1/cassio-aarch64-apple-darwin.tar.gz"
-      sha256 "84bae1371d422fdbc174596e053d6e75da7f9f7d2e73e803cf829dfd1fe4f175"
+      url "https://github.com/ianzepp/cassio/releases/download/v0.8.2/cassio-aarch64-apple-darwin.tar.gz"
+      sha256 "25d8af47c4332756aa65de3aae2424f593afafac5aee75c2a3e21bf25e0a0fd8"
     end
 
     on_intel do
-      url "https://github.com/ianzepp/cassio/releases/download/v0.8.1/cassio-x86_64-apple-darwin.tar.gz"
-      sha256 "13183f56e3a5471c96faf0f188d7a69d90223e43ba6e24cec5994e507d94e77f"
+      url "https://github.com/ianzepp/cassio/releases/download/v0.8.2/cassio-x86_64-apple-darwin.tar.gz"
+      sha256 "57ff3417836f54c58d43bf479486a64f63e1c6a41d840ea41f1b1edb529a8ea1"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ianzepp/cassio/releases/download/v0.8.1/cassio-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9e32b8d02810ba029cd622eca1fb402faec859131c371ee402ce11eec8b48496"
+      url "https://github.com/ianzepp/cassio/releases/download/v0.8.2/cassio-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a91a2b5be7ebe4d1128256deb64e001fb62962569b20d402fde6b36af41d3fb9"
     end
   end
 
