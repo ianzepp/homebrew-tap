@@ -1,7 +1,6 @@
 class Vivarium < Formula
   desc "Local-first IMAP email sync for LLMs"
   homepage "https://github.com/ianzepp/vivarium"
-  version "1.0.0"
   license "MIT"
 
   on_macos do
