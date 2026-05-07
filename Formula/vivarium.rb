@@ -5,11 +5,11 @@ class Vivarium < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ianzepp/vivarium/releases/download/v3.0.0/vivi-aarch64-apple-darwin.tar.gz"
-      sha256 "83bae9f71d833eaf140ddf4766e6e65afcf0528b41e9e292036afd0cee757588"
+      url "https://github.com/ianzepp/vivarium/releases/download/v3.1.0/vivi-aarch64-apple-darwin.tar.gz"
+      sha256 "9eed49f5ec791e118fef6f255c36f3a200a820fb037eb65d0ac766be0e3188b7"
     else
-      url "https://github.com/ianzepp/vivarium/releases/download/v3.0.0/vivi-x86_64-apple-darwin.tar.gz"
-      sha256 "051d9bca7a8042da65ec144ae73461cd541243abedc842b5253e7f57d15692dd"
+      url "https://github.com/ianzepp/vivarium/releases/download/v3.1.0/vivi-x86_64-apple-darwin.tar.gz"
+      sha256 "112ea7b82e8e1cfa1394421bba881ea2c08b0d53d04fadea65d16cf2dcb442bd"
     end
   end
 
@@ -20,6 +20,8 @@ class Vivarium < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/vivi --version")
     assert_match "exec", shell_output("#{bin}/vivi --help")
+    assert_match "agent", shell_output("#{bin}/vivi --help")
+    assert_match "poll", shell_output("#{bin}/vivi agent --help")
     assert_match "send", shell_output("#{bin}/vivi exec --help")
   end
 end
