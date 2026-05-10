@@ -1,7 +1,7 @@
 class Swarmceo < Formula
   desc "Local-first SwarmCEO control plane"
   homepage "https://github.com/ianzepp/swarmceo-cli"
-  url "git@github.com:ianzepp/swarmceo-cli.git",
+  url "ssh://git@github.com/ianzepp/swarmceo-cli.git",
       tag:      "v1.0.0",
       revision: "960df3cffb5448938246fbb16bbebecd39d529cd"
   version "1.0.0"
