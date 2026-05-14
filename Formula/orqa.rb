@@ -5,20 +5,20 @@ class Orqa < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/ianzepp/orqa/releases/download/v0.3.0/orqa-aarch64-apple-darwin.tar.gz"
-      sha256 "05d9a2b0e8ff58aa987ec7f27525c2cc6cb43c85645b9862862edb0d88813d9a"
+      url "https://github.com/ianzepp/orqa/releases/download/v0.4.0/orqa-aarch64-apple-darwin.tar.gz"
+      sha256 "0ddcb48de8a2444a97203248900a76845ba32a84010997c326a8b247f59f225f"
     end
 
     on_intel do
-      url "https://github.com/ianzepp/orqa/releases/download/v0.3.0/orqa-x86_64-apple-darwin.tar.gz"
-      sha256 "50632ea5a2de02cac3206f58e362aa8e4adc9672e1f986944afa034a8585a4b8"
+      url "https://github.com/ianzepp/orqa/releases/download/v0.4.0/orqa-x86_64-apple-darwin.tar.gz"
+      sha256 "6f7fcbe74ee1936ee766f6a7d427f8ab99a2d047aba381c4951cd1bc27768d83"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ianzepp/orqa/releases/download/v0.3.0/orqa-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d6f11ffaa6127021cf4e1dc86f096c05d353b0413fac6cedef0f594da9c2da0a"
+      url "https://github.com/ianzepp/orqa/releases/download/v0.4.0/orqa-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0f9ea290e86213d1f8f007e8a29597a850c44a2f4ec5b22987efc8fe233289ea"
     end
   end
 
