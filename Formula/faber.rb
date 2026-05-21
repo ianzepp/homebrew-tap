@@ -4,11 +4,11 @@ class Faber < Formula
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ianzepp/faber/releases/download/v0.33.0/faber-v0.33.0-aarch64-apple-darwin.tar.gz"
-    sha256 "dc7131a69830414873b53e4a2b34383b583af631cfb43af540b30ef2c9e3adf6"
+    url "https://github.com/ianzepp/faber/releases/download/v0.34.0/faber-v0.34.0-aarch64-apple-darwin.tar.gz"
+    sha256 "13fc76b8decf0e39f98532021976b45e9edf7e1910e318dcda61e019d491d9ea"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ianzepp/faber/releases/download/v0.33.0/faber-v0.33.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "edad05ca411f237eae49d759abda73ac3f91504c3c08a8f8c1d3d37dda64ae07"
+    url "https://github.com/ianzepp/faber/releases/download/v0.34.0/faber-v0.34.0-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "6ecd9c1251a945dbde1d9f7e34b0e6642a45ca31a67b56fda5df1953e68721e6"
   else
     odie "Unsupported platform"
   end
@@ -18,7 +18,7 @@ class Faber < Formula
   end
 
   test do
-    assert_match "faber 0.33.0", shell_output("#{bin}/faber --version")
+    assert_match "faber 0.34.0", shell_output("#{bin}/faber --version")
     assert_match "Usage: faber <COMMAND>", shell_output("#{bin}/faber --help")
   end
 end
