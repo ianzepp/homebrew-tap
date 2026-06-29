@@ -26,15 +26,20 @@ class Faber < Formula
     bin.install "faber"
 
     resource("faber-reference").stage do
-      reference_root = Dir["faber-reference-*"].first
-      odie "missing reference pack directory in tarball" unless reference_root
-      (share/"faber"/"reference").install Dir[File.join(reference_root, "*")]
+      if File.exist?("PACK.toml")
+        (share/"faber"/"reference").install Dir["*"]
+      else
+        reference_root = Dir["faber-reference-*"].first
+        odie "missing reference pack directory in tarball" unless reference_root
+        (share/"faber"/"reference").install Dir[File.join(reference_root, "*")]
+      end
     end
   end
 
   test do
-    assert_match version.to_s, shell_output("\#{bin}/faber --version")
-    assert_match "reference:", shell_output("\#{bin}/faber explain --list")
-    assert_match "functio", shell_output("\#{bin}/faber explain functio")
+    faber_bin = (bin/"faber").to_s
+    assert_match version.to_s, shell_output(faber_bin + " --version")
+    assert_match "reference:", shell_output(faber_bin + " explain --list")
+    assert_match "functio", shell_output(faber_bin + " explain functio")
   end
 end
