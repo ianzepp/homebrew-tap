@@ -28,7 +28,7 @@ class Faber < Formula
     resource("faber-reference").stage do
       reference_root = Dir["faber-reference-*"].first
       odie "missing reference pack directory in tarball" unless reference_root
-      (share/"faber"/"reference").install Dir["\#{reference_root}/*"]
+      (share/"faber"/"reference").install Dir[File.join(reference_root, "*")]
     end
   end
 
