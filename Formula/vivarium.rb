@@ -2,7 +2,6 @@ class Vivarium < Formula
   desc "Local-first IMAP email sync for LLMs"
   homepage "https://github.com/ianzepp/vivarium"
   license "MIT"
-  version "6.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
