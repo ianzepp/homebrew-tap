@@ -5,11 +5,11 @@ class Vivarium < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ianzepp/vivarium/releases/download/v7.0.0/vivi-aarch64-apple-darwin.tar.gz"
-      sha256 "b92041b63118fddceca8f4265cbd5e78a38dd25f09a2296a64dead5873baf500"
+      url "https://github.com/ianzepp/vivarium/releases/download/v7.3.0/vivi-aarch64-apple-darwin.tar.gz"
+      sha256 "a05914d11ffe7739ae671266d33cce3715c965b8706fb92324142a23481a0065"
     else
-      url "https://github.com/ianzepp/vivarium/releases/download/v7.0.0/vivi-x86_64-apple-darwin.tar.gz"
-      sha256 "e64556fd46cf021ee902102701db6e58e331f61d1453d0df0a0c71106797f779"
+      url "https://github.com/ianzepp/vivarium/releases/download/v7.3.0/vivi-x86_64-apple-darwin.tar.gz"
+      sha256 "7d399647515f7a985ce5bbc52db491694645cfd43bbfa9c33628c428723e81f6"
     end
   end
 
